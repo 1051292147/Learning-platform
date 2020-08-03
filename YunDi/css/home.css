@@ -1,0 +1,76 @@
+#office_logo{
+    position: relative;
+    top: 20px;
+    left: 50px;
+}
+/*设置第二行导航条字体属性*/
+.edu_info a{
+    position: relative;
+    top: 25px;
+    left: -26px;
+    color: #0b2e13;
+    font-size: large;
+    margin-right: 20px;
+}
+.user_info{
+    position: relative;
+    top: 25px;
+    color: #0b2e13;
+    font-size: larger;
+    left: -111px;
+}
+.user_info a{
+    margin-left: 30px;
+}
+a:hover{
+    color: red;
+}
+.edu_category{
+    position: relative;
+    top: 35px;
+    background-image: url("../images/yundi/bg.jpg");
+}
+.edu_category_info{
+    padding: 34px 45px;
+    position: relative;
+    left: 58px;
+    font-size: 16px;
+    background-color: rgba(0,0,0,0.5);
+
+}
+.edu_category_info a{
+    color: white;
+    display: block;color: #fff;
+    padding: 0px 49px;
+
+    height: 47px;
+    text-decoration:none;
+}
+.edu_category_info_img{
+    top: 150px;
+    left: 150px;
+}
+.user-register{
+    position: relative;
+    top: 50px;
+    left: 6px;
+}
+.user-register-form{
+    position: relative;
+    top: 60px;
+    left: -65px;
+}
+.phone-reset, .username-reset{
+    width: 45%;
+}
+.login-form{
+    position: absolute;
+    /* left, right, bottom, top要和position一起使用，margin-*不用 */
+    top: 12%;
+    left: 33%;
+}
+.about-me{
+    position: relative;
+    top: 50px;
+    left: 5px;
+}

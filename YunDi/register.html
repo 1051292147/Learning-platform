@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册</title>
+    <link href="css/layui.css" type="text/css" rel="stylesheet">
+    <link href="css/home.css" type="text/css" rel="stylesheet">
+    <script src="js/layui.js" type="application/javascript"></script>
+    <script src="js/jquery-3.4.1.js" type="application/javascript"></script>
+
+</head>
+<body>
+<!--最上方导航条-->
+<div class="layui-row layui-col-space10">
+    <div class="layui-row">
+        <div class="layui-col-md7 layui-nav">
+            <ul class="layui-nav"  lay-filter="">
+                <li class="layui-nav-item"><a href=""> 欢迎访问云迪在线！</a></li>
+            </ul>
+        </div>
+        <div class="layui-col-md5">
+            <ul class="layui-nav"  lay-filter="">
+                <li class="layui-nav-item"><a href=""> 华迪教育</a></li>
+                <li class="layui-nav-item"><a href=""> 云创空间</a></li>
+                <li class="layui-nav-item"><a href=""> 华迪信息</a></li>
+                <li class="layui-nav-item" style="background-color: #007bff"><a href=""> 我要报名</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!--第二行导航条-->
+<div class="layui-row" style="background-color: white">
+    <div class="layui-col-md3">
+        <div class="grid-demo grid-demo-bg1" >
+            <img id="office_logo" src="images/yundi/layout_set_logo.png">
+        </div>
+    </div>
+    <div class="layui-col-md6">
+
+           <span class="edu_info">
+          <a href="">首页</a>
+          <a href="">公开课</a>
+          <a href="">就业培训</a>
+          <a href="">实习实训</a>
+          <a href="">知识</a>
+          <a href="">问题</a>
+
+        </span>
+
+    </div>
+    <div class="layui-col-md3">
+        <span class="user_info">
+              <a href="">我要报名</a>
+             <a href="login.html">登录</a>
+             <a href="register.html">注册</a>
+        </span>
+    </div>
+</div>
+<!--注册表单-->
+<div class="user-register">
+    <div class="layui-row">
+        <div class="layui-col-md6">
+            <img src="images/yundi/Dbg.png">
+        </div>
+        <div class="layui-col-md6">
+            <form class="layui-form user-register-form" action="#" method="post">
+                <div class="layui-form-item">
+                    <label class="layui-form-label">手机号码:</label>
+                    <div class="layui-input-block phone-reset">
+                        <input type="text" id="phone" name="phone" width="60%" required  lay-verify="required" placeholder="请输入手机号" onblur="Phone()" autocomplete="off" class="layui-input">
+                        <span id="span_phone"></span>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">昵称:</label>
+                    <div class="layui-input-block username-reset">
+                        <input type="text" id="username" name="username" required  lay-verify="required" onblur="Name()" placeholder="请输入昵称" autocomplete="off" class="layui-input">
+                        <span id="span_name"></span>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">密码</label>
+                    <div class="layui-input-inline">
+                        <input type="password" id="password" name="password" required lay-verify="required" onblur="Password()" placeholder="请输入密码" autocomplete="off" class="layui-input">
+                        <span id="span_pawword"></span>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">确认密码</label>
+                    <div class="layui-input-inline">
+                        <input type="password" id="repassword" name="repassword" required lay-verify="required" onblur="RePassword()" placeholder="请确认密码" autocomplete="off" class="layui-input">
+                        <span id="span_repassword"></span>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">验证码:</label>
+                    <div class="layui-input-inline">
+                        <input type="text" name="title" required lay-verify="required" placeholder="请输入验证码" autocomplete="off" class="layui-input"></div>
+                    <div class="layui-input-inline">
+<!--                        验证码校验功能此时用的javascript实现，后期在后台实现-->
+                    <canvas id="canvas" width="100" height="43" onclick="dj()" style="border: 1px solid #ccc;border-radius: 5px;"></canvas>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label"></label>
+                    &emsp; &emsp;<button type="button" class="layui-btn  layui-bg-red">
+                    注册
+                </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<!--底部说明-->
+
+<div class="about-me" >
+    <div class="layui-row layui-col-space10">
+            <div class="layui-col-md4 layui-bg-black"  style="height: 150px">
+                <br>
+               <div  style="margin-left: 170px;margin-top: 20px">
+                   <a href="#" style="color: white " >关于我们</a>
+               </div><br>
+                <div style="margin-left: 170px">
+                    <a href="#" style="color: white">公司新闻</a>
+                </div>
+
+
+            </div>
+            <div class="layui-col-md4 layui-bg-black"  style="height: 150px">
+
+                <div style="margin-left: 100px;margin-top: 20px">
+                    <a href="#" style="color: white">关注我们</a>
+                </div>
+                <div style="margin-left: 100px;margin-top: 20px">
+                    <a href="#" style="color: white">官方微信</a>
+                </div>
+
+                <div style="margin-left: 100px;margin-top: 20px">
+                    <a href="#" style="color: white">移动app</a>
+                </div>
+
+            </div>
+            <div class="layui-col-md4 layui-bg-black"  style="height: 150px">
+                <div style="margin-left: 20px;margin-top: 20px">
+                    <button type="button" class="layui-btn layui-btn-warm">全国咨询热线</button>
+                    <br> <br>
+                    <span style="color: white;font-size: larger">028-XXXXXXXX</span>
+                </div>
+                <div style="margin-left: 20px;margin-top: 20px">
+                    <span style="color: white">    地址：成都郫县德源镇大禹东路66号创新创业5区3栋</span>
+                </div>
+
+            </div>
+    </div>
+</div>
+
+<!--表单内容校验-->
+<script type="application/javascript">
+    function Phone() {
+        var phone = document.getElementById("phone").value;
+        var phoneReg=/0?(13|14|15|18|17)[0-9]{9}/;
+        if (!phoneReg.test(phone)) {   //判断
+            var t = span_phone.innerHTML = "手机号码格式不对!"; //输入不合法，则显示提示信息
+            $("#span_phone").css("color","red");
+            return false;
+        }
+        else {
+            span_phone.innerHTML="格式正确";
+            $("#span_phone").css("color","green");
+            return true;
+        }
+    };
+    function Name() {
+        //验证姓名
+        var name = document.getElementById("username").value; //获取你所填写的信息
+        var nameReg = /^[\u4e00-\u9fa5]{2,6}$/;  //定义约束,要求输入2到6个中文
+        if (!nameReg.test(name)) {   //判断
+            var t = span_name.innerHTML = "请输入2~6个汉字!"; //输入不合法，则显示提示信息
+            $("#span_name").css("color","red");
+            return false;
+        }
+        else {
+            span_name.innerHTML = "格式正确"; //验证通过后提示
+            $("#span_name").css("color","green");
+            return true;
+        }
+    };
+
+    function Password() {
+        //密码
+        var pwd = document.getElementById("password").value;
+        var reg = /^[\d\w]{6,12}$/;
+        if (!reg.test(pwd)) {
+            span_pawword.innerHTML = "请输入6~12以内数字、字母或组合密码";
+            $("#span_pawword").css("color","red");
+            return false;
+        }
+        else {
+            span_pawword.innerHTML = "格式正确";
+            $("#span_pawword").css("color","green");
+            return true;
+        }
+    };
+    function RePassword() {
+
+            //确认密码
+            var pwd = document.getElementById("password").value;
+            var pwd2 = document.getElementById("repassword").value;
+
+            if (pwd != pwd2) {
+                span_repassword.innerHTML = "两次输入不一致";
+                $("#span_repassword").css("color","red");
+                return false;
+            }
+           else if (pwd==""||pwd==null) {
+                span_repassword.innerHTML = "不能为空哦";
+                $("#span_repassword").css("color","red");
+                return false;
+            }else{
+                span_repassword.innerHTML = "格式正确";
+                $("#span_repassword").css("color","green");
+                return true;
+            }
+
+    };
+
+</script>
+<!--验证码-->
+<script>
+    var show_num = [];
+    draw(show_num);
+    function dj(){
+        draw(show_num);
+    }
+    function sublim(){
+        var val=document.getElementById("text").value;
+        var num = show_num.join("");
+        if(val==''){
+            alert('请输入验证码！');
+        }else if(val == num){
+            alert('提交成功！');
+            document.getElementById(".input-val").val('');
+            draw(show_num);
+
+        }else{
+            alert('验证码错误！\n你输入的是:  '+val+"\n正确的是:  "+num+'\n请重新输入！');
+            document.getElementById("text").value='';
+            draw(show_num);
+        }
+
+
+
+    }
+    function draw(show_num) {
+        var canvas_width=document.getElementById('canvas').clientWidth;
+        var canvas_height=document.getElementById('canvas').clientHeight;
+        var canvas = document.getElementById("canvas");//获取到canvas的对象，演员
+        var context = canvas.getContext("2d");//获取到canvas画图的环境，演员表演的舞台
+        canvas.width = canvas_width;
+        canvas.height = canvas_height;
+        var sCode = "A,B,C,E,F,G,H,J,K,L,M,N,P,Q,R,S,T,W,X,Y,Z,1,2,3,4,5,6,7,8,9,0,q,w,e,r,t,y,u,i,o,p,a,s,d,f,g,h,j,k,l,z,x,c,v,b,n,m";
+        var aCode = sCode.split(",");
+        var aLength = aCode.length;//获取到数组的长度
+
+        for (var i = 0; i <= 3; i++) {
+            var j = Math.floor(Math.random() * aLength);//获取到随机的索引值
+            var deg = Math.random() * 30 * Math.PI / 180;//产生0~30之间的随机弧度
+            var txt = aCode[j];//得到随机的一个内容
+            show_num[i] = txt;
+            var x = 10 + i * 20;//文字在canvas上的x坐标
+            var y = 20 + Math.random() * 8;//文字在canvas上的y坐标
+            context.font = "bold 23px 微软雅黑";
+
+            context.translate(x, y);
+            context.rotate(deg);
+
+            context.fillStyle = randomColor();
+            context.fillText(txt, 0, 0);
+
+            context.rotate(-deg);
+            context.translate(-x, -y);
+        }
+        for (var i = 0; i <= 5; i++) { //验证码上显示线条
+            context.strokeStyle = randomColor();
+            context.beginPath();
+            context.moveTo(Math.random() * canvas_width, Math.random() * canvas_height);
+            context.lineTo(Math.random() * canvas_width, Math.random() * canvas_height);
+            context.stroke();
+        }
+        for (var i = 0; i <= 30; i++) { //验证码上显示小点
+            context.strokeStyle = randomColor();
+            context.beginPath();
+            var x = Math.random() * canvas_width;
+            var y = Math.random() * canvas_height;
+            context.moveTo(x, y);
+            context.lineTo(x + 1, y + 1);
+            context.stroke();
+        }
+    }
+    function randomColor() {//得到随机的颜色值
+        var r = Math.floor(Math.random() * 256);
+        var g = Math.floor(Math.random() * 256);
+        var b = Math.floor(Math.random() * 256);
+        return "rgb(" + r + "," + g + "," + b + ")";
+    }
+</script>
+</body>
+</html>
